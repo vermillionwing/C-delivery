@@ -8,7 +8,7 @@ pipeline {
         stage('Lint') {
             steps {
                 dir('Python') {
-                    sh 'pip3 install -r /home/python-node/Jenkins/workspace/requirements.txt'
+                    sh 'pip3 install -r requirements.txt'
                     sh 'pylint *.py --exit-zero'
                 }
             }
